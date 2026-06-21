@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Chinchina</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS sencillo -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #6c757d;
+            color: white;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #6c757d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="text-center">
+    <h1>Panadería Chinchina</h1>
+    <p>Pan fresco todos los días</p>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="#">Chinchina</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-4">
+
+<!-- INICIO -->
+<section id="inicio" class="hero mb-4">
+    <article>
+        <h2>Bienvenidos</h2>
+        <p>
+            Somos una panadería familiar que ofrece productos frescos todos los días,
+            elaborados con ingredientes de calidad.
+        </p>
+        <button class="btn btn-secondary">Ver productos</button>
+    </article>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section id="quienes" class="mb-5">
+    <div class="row align-items-center">
+
+        <article class="col-md-6">
+            <h2>Quiénes Somos</h2>
+            <p>
+                Panadería Chinchina es un emprendimiento familiar que busca ofrecer
+                pan fresco y económico para la comunidad.
+            </p>
+        </article>
+
+        <aside class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec"
+                 class="img-fluid rounded"
+                 alt="Panadería con panes frescos">
+        </aside>
+
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="mb-5">
+    <h2 class="text-center mb-3">Servicios</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card p-3">
+                <h5>Pan diario</h5>
+                <p>Pan fresco todos los días.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card p-3">
+                <h5>Pasteles</h5>
+                <p>Pasteles para eventos y cumpleaños.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card p-3">
+                <h5>Delivery</h5>
+                <p>Entrega a domicilio dentro de la ciudad.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="mb-5">
+    <h2 class="text-center">Contacto</h2>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <form class="p-3 border rounded">
+
+                <input type="text" class="form-control mb-2" placeholder="Nombre">
+                <input type="email" class="form-control mb-2" placeholder="Correo">
+                <input type="text" class="form-control mb-2" placeholder="Asunto">
+                <textarea class="form-control mb-2" rows="4" placeholder="Mensaje"></textarea>
+
+                <button class="btn btn-secondary w-100">Enviar</button>
+
+            </form>
+        </div>
+
+        <div class="col-md-6 p-3">
+            <p><strong>Dirección:</strong> Quito, Ecuador</p>
+            <p><strong>Teléfono:</strong> 0979341075</p>
+            <p><strong>Correo:</strong> iefc.jhosue.quishpe@gmail.com</p>
+
+            <a class="btn btn-outline-secondary m-1" href="#">WhatsApp</a>
+            <a class="btn btn-outline-secondary m-1" href="#">Facebook</a>
+            <a class="btn btn-outline-secondary m-1" href="#">Instagram</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>Estudiante: Kevin Quishpe</p>
+    <p>Desarrollo de Aplicaciones Web</p>
+    <p>2026</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
