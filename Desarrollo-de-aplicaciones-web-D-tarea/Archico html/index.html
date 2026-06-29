@@ -1,0 +1,61 @@
+<!-- PEDIDOS -->
+<section id="pedidos" class="mb-5">
+
+    <h2 class="text-center mb-4">Registro de Pedidos</h2>
+
+    <form id="formPedido">
+
+        <div class="row g-2 align-items-center">
+
+            <div class="col-md-3">
+                <input
+                    type="text"
+                    id="cliente"
+                    class="form-control"
+                    placeholder="Nombre del cliente">
+            </div>
+
+            <div class="col-md-3">
+                <input
+                    type="text"
+                    id="producto"
+                    class="form-control"
+                    placeholder="Pedido">
+            </div>
+
+            <div class="col-md-3">
+                <select
+                    id="categoria"
+                    class="form-select">
+
+                    <option value="">Tipo de pan</option>
+                    <option>Pan tradicional</option>
+                    <option>Pastel</option>
+                    <option>Postre</option>
+                    <option>Bebida</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <button
+                    type="submit"
+                    class="btn btn-secondary w-100">
+                    Registrar Pedido
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+    <div id="mensaje" class="mt-3"></div>
+
+    <h4 class="mt-4">
+        Pedidos registrados:
+        <span id="total">0</span>
+    </h4>
+
+    <div id="listaPedidos"></div>
+
+</section>
