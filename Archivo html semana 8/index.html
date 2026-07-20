@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Chinchina</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                🥖 Panadería Chinchina
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formPedido">Registrar</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#listaPedidos">Pedidos</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="bg-secondary text-white text-center py-5 shadow">
+
+        <div class="container">
+
+            <h1 class="display-5 fw-bold">
+                Sistema de Gestión de Pedidos
+            </h1>
+
+            <p class="lead">
+                Administra los pedidos de la Panadería Chinchina
+            </p>
+
+        </div>
+
+    </header>
+
+    <main class="container my-5">
+
+        <div class="row">
+
+            <!-- Formulario -->
+            <div class="col-lg-6 mb-4">
+
+                <div class="card shadow">
+
+                    <div class="card-header bg-secondary text-white">
+
+                        <h4 class="mb-0">
+                            Registro de Pedidos
+                        </h4>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="formPedido">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-12">
+
+                                    <label class="form-label">
+                                        Nombre del cliente
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="cliente"
+                                        class="form-control"
+                                        placeholder="Ingrese el nombre">
+
+                                    <small id="errorCliente" class="text-danger"></small>
+
+                                </div>
+
+                                <div class="col-md-12">
+
+                                    <label class="form-label">
+                                        Título del pedido
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="producto"
+                                        class="form-control"
+                                        placeholder="Ej. Pastel de chocolate">
+
+                                    <small id="errorProducto" class="text-danger"></small>
+
+                                </div>
+
+                                <div class="col-12">
+
+                                    <label class="form-label">
+                                        Descripción
+                                    </label>
+
+                                    <textarea
+                                        id="descripcion"
+                                        class="form-control"
+                                        rows="3"
+                                        placeholder="Escriba los detalles del pedido"></textarea>
+
+                                    <small id="errorDescripcion" class="text-danger"></small>
+
+                                </div>
+
+                                <div class="col-md-12">
+
+                                    <label class="form-label">
+                                        Categoría
+                                    </label>
+
+                                    <select
+                                        id="categoria"
+                                        class="form-select">
+
+                                        <option value="">
+                                            Seleccione una categoría
+                                        </option>
+
+                                        <option>Pan tradicional</option>
+                                        <option>Pastel</option>
+                                        <option>Postre</option>
+                                        <option>Bebida</option>
+
+                                    </select>
+
+                                    <small id="errorCategoria" class="text-danger"></small>
+
+                                </div>
+
+                                <div class="col-md-12 d-grid">
+
+                                    <button
+                                        type="submit"
+                                        class="btn btn-success">
+
+                                        <i class="bi bi-plus-circle"></i>
+
+                                        Registrar Pedido
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                        <!-- Spinner -->
+                        <div
+                            id="spinner"
+                            class="text-center mt-4 d-none">
+
+                            <div
+                                class="spinner-border text-success"
+                                role="status">
+
+                                <span class="visually-hidden">
+                                    Cargando...
+                                </span>
+
+                            </div>
+
+                            <p class="mt-2">
+                                Registrando pedido...
+                            </p>
+
+                        </div>
+
+                        <!-- Alertas -->
+                        <div id="mensaje" class="mt-3"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Imagen -->
+            <div class="col-lg-6 mb-4">
+
+                <div class="card shadow h-100">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1509440159596-0249088772ff"
+                        class="card-img-top"
+                        alt="Panadería">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Bienvenido
+                        </h5>
+
+                        <p class="card-text">
+
+                            Desde este sistema podrá registrar y visualizar todos
+                            los pedidos realizados por los clientes.
+
+                        </p>
+
+                        <button
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalInfo">
+
+                            Más información
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Pedidos -->
+
+        <div class="card shadow">
+
+            <div class="card-header bg-dark text-white">
+
+                <h4>
+
+                    Pedidos registrados
+
+                    <span
+                        class="badge bg-warning text-dark"
+                        id="total">
+
+                        0
+
+                    </span>
+
+                </h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <!-- Renderizado desde JavaScript -->
+                <div id="listaPedidos" class="row gy-3"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal Bootstrap -->
+
+    <div
+        class="modal fade"
+        id="modalInfo"
+        tabindex="-1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+
+                        Información
+
+                    </h5>
+
+                    <button
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    Este sistema permite registrar, validar y visualizar
+                    dinámicamente los pedidos de la Panadería Chinchina utilizando
+                    JavaScript y Bootstrap.
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cerrar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-dark text-white text-center p-3 mt-5">
+
+        © 2026 Panadería Chinchina
+
+    </footer>
+
+    <!-- Bootstrap JS (obligatorio para Modal y Navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
